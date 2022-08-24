@@ -1,0 +1,12 @@
+version: '3'
+
+# サービス定義
+services:
+  app:                              # サービス名(コンテナ名)
+    build:                          # build
+      context: .                    # build context
+      dockerfile: src/Dockerfile # Dockerfile の指定
+    image: key-extraction:v1
+    ports:                          # port指定(ホストのポートをコンテナのポートにつなげる)
+      # host:container
+      - "8051:8051"
