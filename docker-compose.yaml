@@ -3,10 +3,14 @@ version: '3'
 # サービス定義
 services:
   app:                              # サービス名(コンテナ名)
+    container_name: keyExContainer
     build:                          # build
       context: .                    # build context
-      dockerfile: src/Dockerfile # Dockerfile の指定
-    image: key-extraction:v1
+      dockerfile: Dockerfile # Dockerfile の指定
+    image: keyextraction:v1
+    volumes:
+      - ./src:/src
     ports:                          # port指定(ホストのポートをコンテナのポートにつなげる)
       # host:container
       - "8051:8051"
+    tty: true

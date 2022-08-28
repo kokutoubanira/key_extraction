@@ -1,13 +1,13 @@
+streamlit
 pandas
 neologdn
 statistics
 tqdm
 textacy
 rake_ja
-nltk
 spacy
 ginza
 ja_ginza_electra
-networkx ==2.6.3
-pyg-nightly
+networkx
 scipy
+neologdn
