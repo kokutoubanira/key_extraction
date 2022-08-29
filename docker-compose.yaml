@@ -13,4 +13,6 @@ services:
     ports:                          # port指定(ホストのポートをコンテナのポートにつなげる)
       # host:container
       - "8051:8051"
+    expose:
+      - 8501
     tty: true
